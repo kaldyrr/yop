@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YoptaScript — Тёмный лендинг с демо</title>
+    <meta name="description" content="Минимальный статичный сайт с демо-виджетом на YoptaScript. Тёмная тема, розовые акценты и высокая производительность." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="YoptaScript — Тёмный лендинг с демо" />
+    <meta property="og:description" content="Минимальный статичный сайт с демо-виджетом на YoptaScript. Тёмная тема, розовые акценты." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-image.svg" />
+    <meta property="og:url" content="https://kaldyrr.github.io/yop/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YoptaScript — Тёмный лендинг с демо" />
+    <meta name="twitter:description" content="Минимальный статичный сайт с демо-виджетом на YoptaScript. Тёмная тема, розовые акценты." />
+    <meta name="twitter:image" content="assets/img/og-image.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0b0b10" />
+
+    <link rel="preload" as="image" href="assets/img/hero-illustration.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="logo" href="#home" aria-label="На главную">Yopta<span>Script</span></a>
+        <ul class="nav-list" role="list">
+          <li><a href="#features">Фичи</a></li>
+          <li><a href="#demo">Демо</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section id="home" class="section hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">Тёмный сайт с YoptaScript</h1>
+            <p class="lead">Лёгкий, адаптивный и доступный лендинг с интерактивным демо‑виджетом на YoptaScript. Никаких серверов — только HTML/CSS/JS.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#demo">Попробовать демо</a>
+              <a class="btn btn-ghost" href="https://github.com/kaldyrr/yop" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="assets/img/hero-illustration.svg" width="640" height="480" alt="Иллюстрация: код и розовые акценты" loading="eager" />
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section features" aria-labelledby="features-title">
+        <div class="container">
+          <h2 id="features-title">Фичи</h2>
+          <div class="features-grid" role="list">
+            <article class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">⚡</div>
+              <h3 class="card-title">Быстрый</h3>
+              <p class="card-text">Чистый статик без бандлера. Минимум сетевых запросов и быстрый рендер.</p>
+            </article>
+            <article class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">🌙</div>
+              <h3 class="card-title">Тёмная тема</h3>
+              <p class="card-text">Фон #0b0b10, контрастный текст и розовые акценты #ff2d6f/#e91e63.</p>
+            </article>
+            <article class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">📱</div>
+              <h3 class="card-title">Адаптив</h3>
+              <p class="card-text">Верстка аккуратно масштабируется от 360px до ≥1440px.</p>
+            </article>
+            <article class="card" role="listitem">
+              <div class="card-icon" aria-hidden="true">♿</div>
+              <h3 class="card-title">Доступность</h3>
+              <p class="card-text">Семантика, фокус‑кольца, читабельные размеры и комфортные интервалы.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="section demo" aria-labelledby="demo-title">
+        <div class="container">
+          <h2 id="demo-title">Демо‑виджет на YoptaScript</h2>
+          <p class="muted">Измените текст и кликните кнопку — виджет ответит. Код обработчиков подключён через <code>language="YoptaScript"</code>.</p>
+          <div class="demo-widget" role="region" aria-live="polite" aria-label="Интерактивный виджет">
+            <label for="demoInput" class="visually-hidden">Ваш текст</label>
+            <input id="demoInput" class="input" type="text" placeholder="Напишите что-нибудь…" autocomplete="off" />
+            <button id="demoBtn" class="btn btn-primary" type="button">Сказать</button>
+            <output id="demoOut" class="output" for="demoInput"></output>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section contacts" aria-labelledby="contacts-title">
+        <div class="container">
+          <h2 id="contacts-title">Контакты</h2>
+          <ul class="links" role="list">
+            <li><a href="https://github.com/kaldyrr" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© <span id="year"></span> YoptaScript Demo. Сделано с любовью и розовыми акцентами.</p>
+      </div>
+    </footer>
+
+    <!-- Код на YoptaScript (внешний файл) -->
+    <script language="YoptaScript" src="yopta/main.yopta"></script>
+
+    <!-- Рантайм YoptaScript из dist (локальная копия) -->
+    <script src="js/yopta.js" defer></script>
+    <!-- Фолбэк на CDN, если локальный файл не загрузился -->
+    <script>
+      window.addEventListener('error', function (e) {
+        var target = e && e.target;
+        if (target && target.tagName === 'SCRIPT' && /js\/yopta\.js$/.test(target.src)) {
+          var cdn = document.createElement('script');
+          cdn.src = 'https://cdn.jsdelivr.net/gh/samgozman/YoptaScript/dist/yopta.js';
+          document.body.appendChild(cdn);
+        }
+      }, true);
+      // Небольшой JS-хелпер: текущий год
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+

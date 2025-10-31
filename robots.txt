@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaldyrr.github.io/yop/sitemap.xml
+

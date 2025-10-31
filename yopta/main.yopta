@@ -1,0 +1,29 @@
+// Обработчики демо-виджета. Код написан в файле *.yopta и подключён как <script language="YoptaScript" src="...">.
+// Здесь используется обычный JS, который компилер YoptaScript пропустит без изменений.
+
+document.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('demoInput');
+  var btn = document.getElementById('demoBtn');
+  var out = document.getElementById('demoOut');
+
+  function say() {
+    var v = (input.value || '').trim();
+    if (!v) {
+      out.textContent = 'Нечего сказать? Попробуйте ввести текст.';
+      return;
+    }
+    var responses = [
+      'Принято. Красиво сказано! ✨',
+      'Готово. Ещё что-нибудь? 👇',
+      'Окей! Передано во вселенную. 🌌',
+    ];
+    var rnd = responses[Math.floor(Math.random() * responses.length)];
+    out.textContent = 'Ты сказал: “' + v + '”. ' + rnd;
+  }
+
+  btn.addEventListener('click', say);
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') say();
+  });
+});
+
