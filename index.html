@@ -121,6 +121,7 @@
 
     <!-- Рантайм YoptaScript из dist (локальная копия) -->
     <script src="js/yopta.js" defer></script>
+    <script src="js/app.js" defer></script>
     <!-- Фолбэк на CDN, если локальный файл не загрузился -->
     <script>
       window.addEventListener('error', function (e) {
@@ -134,6 +135,30 @@
       // Небольшой JS-хелпер: текущий год
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    
+    <!-- Playground: загрузка и запуск примеров YoptaScript -->
+    <section id="playground" class="section" aria-labelledby="playground-title">
+      <div class="container">
+        <h2 id="playground-title">YoptaScript Playground</h2>
+        <p class="muted">Загрузите пример кода на YoptaScript, отредактируйте и запустите прямо на странице.</p>
+        <div class="demo-widget" role="region" aria-label="Песочница YoptaScript">
+          <div style="grid-column: 1 / -1; display:flex; gap:8px; flex-wrap:wrap; align-items:center">
+            <label for="exSelect" class="visually-hidden">Пример</label>
+            <select id="exSelect" class="input" style="max-width:280px">
+              <option value="yopta/examples/vars.yopta">Переменные / функции</option>
+              <option value="yopta/examples/loops.yopta">Циклы</option>
+              <option value="yopta/examples/document.yopta">Document & DOM</option>
+              <option value="yopta/examples/math.yopta">Math</option>
+              <option value="yopta/examples/logical.yopta">Логические операции</option>
+            </select>
+            <button type="button" class="btn btn-ghost" id="exLoad">Загрузить</button>
+            <button type="button" class="btn btn-primary" id="exRun">Запустить</button>
+            <button type="button" class="btn btn-ghost" id="exClear">Очистить</button>
+          </div>
+          <textarea id="exCode" class="input" style="grid-column: 1 / -1; min-height: 200px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; resize: vertical" placeholder="Код на YoptaScript..."></textarea>
+          <pre id="exOutput" class="output" aria-live="polite"></pre>
+        </div>
+      </div>
+    </section>
   </body>
   </html>
-
